@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="style.css" />
+      <title>Beatmaker</title>
+   </head>
+   <body>
+      <div class="sequencer">
+         <div class="clap-track">
+            <div class="controls">
+               <h1>Clap</h1>
+               <button data-track="1" class="mute clap-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="clap-select" id="clap-select"></select>
+            </div>
+            <div class="clap"></div>
+         </div>
+
+         <div class="hihat-track">
+            <div class="controls">
+               <h1>Hihat</h1>
+               <button data-track="1" class="mute hihat-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="hihat-select" id="hihat-select"></select>
+            </div>
+            <div class="hihat"></div>
+         </div>
+
+         <div class="kick-track">
+            <div class="controls">
+               <h1>Kick</h1>
+               <button data-track="0" class="mute kick-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="kick-select" id="kick-select"></select>
+            </div>
+            <div class="kick"></div>
+         </div>
+
+         <div class="perc-track">
+            <div class="controls">
+               <h1>Perc</h1>
+               <button data-track="1" class="mute perc-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="perc-select" id="perc-select"></select>
+            </div>
+            <div class="perc"></div>
+         </div>
+
+         <div class="snare-track">
+            <div class="controls">
+               <h1>Snare</h1>
+               <button data-track="1" class="mute snare-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="snare-select" id="snare-select"></select>
+            </div>
+            <div class="snare"></div>
+         </div>
+
+         <div class="tom-track">
+            <div class="controls">
+               <h1>Tom</h1>
+               <button data-track="1" class="mute tom-volume">
+                  <i class="fa-solid fa-volume-xmark"></i>
+               </button>
+               <select name="tom-select" id="tom-select"></select>
+            </div>
+            <div class="tom"></div>
+         </div>
+      </div>
+
+      <script
+         src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+         integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+         crossorigin="anonymous"
+         referrerpolicy="no-referrer"
+      ></script>
+      <script src="app.js" type="module"></script>
+   </body>
+</html>
