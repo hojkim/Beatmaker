@@ -24,6 +24,23 @@ const types = [
    [tomSelect, tomPad, "tom"],
 ];
 
+class DrumKit {
+   constructor() {
+      this.pads = document.querySelectorAll(".pad");
+      this.clapAudio = document.querySelector(".clap-sound");
+      this.hihatAudio = document.querySelector(".hihat-sound");
+      this.kickAudio = document.querySelector(".kick-sound");
+      this.percAudio = document.querySelector(".perc-sound");
+      this.snareAudio = document.querySelector(".snare-sound");
+      this.tomAudio = document.querySelector(".tom-sound");
+      this.index = 0;
+   }
+
+   repeat() {
+      let step = this.index % 8;
+   }
+}
+
 for (let i = 0; i < types.length; i++) {
    for (let j = 0; j < sounds[i].length; j++) {
       let option = document.createElement("option");
