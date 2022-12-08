@@ -1,5 +1,6 @@
 // Imports
 import { sounds } from "./data.js";
+import { DrumKit } from "./drumkit.js";
 
 // Query Selectors
 const clapSelect = document.querySelector("#clap-select");
@@ -24,23 +25,7 @@ const types = [
    [tomSelect, tomPad, "tom"],
 ];
 
-class DrumKit {
-   constructor() {
-      this.pads = document.querySelectorAll(".pad");
-      this.clapAudio = document.querySelector(".clap-sound");
-      this.hihatAudio = document.querySelector(".hihat-sound");
-      this.kickAudio = document.querySelector(".kick-sound");
-      this.percAudio = document.querySelector(".perc-sound");
-      this.snareAudio = document.querySelector(".snare-sound");
-      this.tomAudio = document.querySelector(".tom-sound");
-      this.index = 0;
-   }
-
-   repeat() {
-      let step = this.index % 8;
-   }
-}
-
+// Adds repetitive elements to HTML
 for (let i = 0; i < types.length; i++) {
    for (let j = 0; j < sounds[i].length; j++) {
       let option = document.createElement("option");
@@ -57,3 +42,13 @@ for (let i = 0; i < types.length; i++) {
       types[i][1].appendChild(pad);
    }
 }
+
+const drumkit = new DrumKit();
+
+drumkit.pads.forEach((pad) => {
+   pad.addEventListener("click", drumkit.activePad);
+});
+
+drumkit.playBtn.addEventListener("click", () => {
+   drumkit.start();
+});

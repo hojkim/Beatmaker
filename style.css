@@ -71,7 +71,7 @@ select {
 }
 
 .pad {
-   transition: all 0.5 ease;
+   transition: all 0.5s ease;
 }
 
 .clap-pad,
@@ -111,28 +111,28 @@ select {
    background-color: #a0c4ff;
 }
 
-.clap-pad::after {
-   background-color: #ff5b5b;
+.clap-pad.active {
+   background-color: #ff4141;
 }
 
-.hihat-pad::after {
-   background-color: #ffb050;
+.hihat-pad.active {
+   background-color: #ffa63a;
 }
 
-.kick-pad::after {
-   background-color: #faff60;
+.kick-pad.active {
+   background-color: #f8ff1f;
 }
 
-.perc-pad::after {
-   background-color: #7bff60;
+.perc-pad.active {
+   background-color: #67ff48;
 }
 
-.snare-pad::after {
-   background-color: #4bf0ff;
+.snare-pad.active {
+   background-color: #38eeff;
 }
 
-.tom-pad::after {
-   background-color: #5295ff;
+.tom-pad.active {
+   background-color: #428aff;
 }
 
 .play {
