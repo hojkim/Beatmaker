@@ -47,6 +47,9 @@ const drumkit = new DrumKit();
 
 drumkit.pads.forEach((pad) => {
    pad.addEventListener("click", drumkit.activePad);
+   pad.addEventListener("animationend", function () {
+      this.style.animation = "";
+   });
 });
 
 drumkit.playBtn.addEventListener("click", () => {

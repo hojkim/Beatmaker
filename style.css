@@ -145,3 +145,12 @@ select {
    border-radius: 3%;
    cursor: pointer;
 }
+
+@keyframes playTrack {
+   from {
+      transform: scale(1);
+   }
+   to {
+      transform: scale(1.2);
+   }
+}
