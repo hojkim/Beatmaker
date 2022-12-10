@@ -124,7 +124,7 @@ select {
 }
 
 .perc-pad.active {
-   background-color: #67ff48;
+   background-color: #5eff3d;
 }
 
 .snare-pad.active {
@@ -144,6 +144,12 @@ select {
    border: none;
    border-radius: 3%;
    cursor: pointer;
+   font-weight: 800;
+   transition: all 0.3s ease-in-out;
+}
+
+.play:hover {
+   transform: scale(1.1);
 }
 
 @keyframes playTrack {
