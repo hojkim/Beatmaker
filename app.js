@@ -56,3 +56,9 @@ drumkit.playBtn.addEventListener("click", () => {
    drumkit.updateBtn();
    drumkit.start();
 });
+
+drumkit.selects.forEach((select) => {
+   select.addEventListener("change", function (event) {
+      drumkit.changeSound(event);
+   });
+});
