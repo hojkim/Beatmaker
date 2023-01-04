@@ -152,6 +152,11 @@ select {
    transform: scale(1.1);
 }
 
+.mute.active {
+   background-color: rgb(187, 187, 187);
+   transition: all 0.2s ease;
+}
+
 @keyframes playTrack {
    from {
       transform: scale(1);

@@ -15,7 +15,7 @@ export class DrumKit {
       this.snareAudio = document.querySelector(".snare-sound");
       this.tomAudio = document.querySelector(".tom-sound");
       this.selects = document.querySelectorAll("select");
-      // this.muteBtns = document.querySelectorAll(".mute");
+      this.muteBtns = document.querySelectorAll(".mute");
       this.index = 0;
       this.bpm = 100;
       this.isPlaying = null;
@@ -100,6 +100,54 @@ export class DrumKit {
          case "tom-select":
             this.tomAudio.src = soundValue;
             break;
+      }
+   }
+
+   mute(event) {
+      const muteIndex = event.target.getAttribute("data-track");
+      event.target.classList.toggle("active");
+      if (event.target.classList.contains("active")) {
+         switch (muteIndex) {
+            case "0":
+               this.clapAudio.volume = 0;
+               break;
+            case "1":
+               this.hihatAudio.volume = 0;
+               break;
+            case "2":
+               this.kickAudio.volume = 0;
+               break;
+            case "3":
+               this.percAudio.volume = 0;
+               break;
+            case "4":
+               this.snareAudio.volume = 0;
+               break;
+            case "5":
+               this.tomAudio.volume = 0;
+               break;
+         }
+      } else {
+         switch (muteIndex) {
+            case "0":
+               this.clapAudio.volume = 1;
+               break;
+            case "1":
+               this.hihatAudio.volume = 1;
+               break;
+            case "2":
+               this.kickAudio.volume = 1;
+               break;
+            case "3":
+               this.percAudio.volume = 1;
+               break;
+            case "4":
+               this.snareAudio.volume = 1;
+               break;
+            case "5":
+               this.tomAudio.volume = 1;
+               break;
+         }
       }
    }
 }
