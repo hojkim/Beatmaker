@@ -16,6 +16,7 @@ export class DrumKit {
       this.tomAudio = document.querySelector(".tom-sound");
       this.selects = document.querySelectorAll("select");
       this.muteBtns = document.querySelectorAll(".mute");
+      this.tempoSlider = document.querySelector(".tempo-slider");
       this.index = 0;
       this.bpm = 100;
       this.isPlaying = null;
@@ -148,6 +149,21 @@ export class DrumKit {
                this.tomAudio.volume = 1;
                break;
          }
+      }
+   }
+
+   changeTempo(event) {
+      const tempoText = document.querySelector(".tempo-num");
+      tempoText.innerText = event.target.value;
+   }
+
+   updateTempo(event) {
+      this.bpm = event.target.value;
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+      const playBtn = document.querySelector(".play");
+      if (playBtn.classList.contains("active")) {
+         this.start();
       }
    }
 }

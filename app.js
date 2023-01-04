@@ -68,3 +68,11 @@ drumkit.muteBtns.forEach((btn) => {
       drumkit.mute(event);
    });
 });
+
+drumkit.tempoSlider.addEventListener("input", function (event) {
+   drumkit.changeTempo(event);
+});
+
+drumkit.tempoSlider.addEventListener("change", function (event) {
+   drumkit.updateTempo(event);
+});
