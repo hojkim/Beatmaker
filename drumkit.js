@@ -150,6 +150,7 @@ export class DrumKit {
                break;
          }
       }
+      return muteIndex;
    }
 
    changeTempo(event) {
@@ -161,8 +162,7 @@ export class DrumKit {
       this.bpm = event.target.value;
       clearInterval(this.isPlaying);
       this.isPlaying = null;
-      const playBtn = document.querySelector(".play");
-      if (playBtn.classList.contains("active")) {
+      if (this.playBtn.classList.contains("active")) {
          this.start();
       }
    }

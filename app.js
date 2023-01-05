@@ -65,7 +65,7 @@ drumkit.selects.forEach((select) => {
 
 drumkit.muteBtns.forEach((btn) => {
    btn.addEventListener("click", function (event) {
-      drumkit.mute(event);
+      const index = drumkit.mute(event);
    });
 });
 

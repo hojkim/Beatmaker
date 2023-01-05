@@ -96,7 +96,7 @@ select {
 }
 
 .kick-pad {
-   background-color: #fdffb6;
+   background-color: #fdffcd;
 }
 
 .perc-pad {
@@ -112,27 +112,27 @@ select {
 }
 
 .clap-pad.active {
-   background-color: #ff4141;
+   background-color: #ff2626;
 }
 
 .hihat-pad.active {
-   background-color: #ffa63a;
+   background-color: #ff9d25;
 }
 
 .kick-pad.active {
-   background-color: #f8ff1f;
+   background-color: #f6ff00;
 }
 
 .perc-pad.active {
-   background-color: #5eff3d;
+   background-color: #47ff22;
 }
 
 .snare-pad.active {
-   background-color: #38eeff;
+   background-color: #1cecff;
 }
 
 .tom-pad.active {
-   background-color: #428aff;
+   background-color: #2377ff;
 }
 
 .play {
@@ -167,6 +167,10 @@ select {
    font-size: 1rem;
    font-weight: 500;
    text-align: center;
+}
+
+.pad.muted {
+   background-color: gray;
 }
 
 .mute.active {
