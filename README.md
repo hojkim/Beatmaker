@@ -1,4 +1,4 @@
-# Beatmaker Project
+# [Beatmaker Project](https://hojkim.github.io/Beatmaker/)
 
 A project that takes local audio files and transfers them into categorized beat pads.
 
